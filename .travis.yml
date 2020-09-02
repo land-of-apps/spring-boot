@@ -5,7 +5,7 @@ jdk:
 import: land-of-apps/land-of-apps:travis/java-imports.yml
 
 install:
-- ./gradlew publishToMavenLocal
+- ./gradlew projects
 
 script:
 - ./gradlew :spring-boot-project:spring-boot-cli:test
