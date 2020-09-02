@@ -1,0 +1,10 @@
+name: spring-boot
+packages:
+ - path: org.springframework.boot
+   exclude:
+    - org.springframework.boot.context.properties.source.ConfigurationPropertySourcesTests
+    - org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfigurationTests
+    - org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfigurationTests
+    - org.springframework.boot.test.autoconfigure.data.cassandra.DataCassandraTestWithIncludeFilterIntegrationTests
+    - org.springframework.boot.loader.archive.JarFileArchiveTests
+    - org.springframework.boot.loader.jar.JarFileTests
