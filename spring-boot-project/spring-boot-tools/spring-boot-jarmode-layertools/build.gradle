@@ -15,3 +15,11 @@ dependencies {
 	testImplementation("org.mockito:mockito-core")
 	testImplementation("org.mockito:mockito-junit-jupiter")
 }
+
+test {
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
+}

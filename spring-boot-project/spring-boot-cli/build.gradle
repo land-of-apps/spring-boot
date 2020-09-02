@@ -96,6 +96,11 @@ sourceSets {
 
 test {
 	dependsOn syncTestRepository
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
 }
 
 task fullJar(type: Jar) {

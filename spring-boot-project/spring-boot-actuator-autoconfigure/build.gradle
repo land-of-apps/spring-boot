@@ -150,6 +150,11 @@ dependencies {
 
 test {
 	outputs.dir("${buildDir}/generated-snippets")
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
 }
 
 task dependencyVersions(type: org.springframework.boot.build.constraints.ExtractVersionConstraints) {

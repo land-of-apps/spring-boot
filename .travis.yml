@@ -1,0 +1,22 @@
+version: ~> 1.0
+
+jdk:
+- openjdk8
+import: land-of-apps/land-of-apps:travis/java-imports.yml
+
+script:
+- ./gradlew :spring-boot-project:spring-boot-cli:test
+- ./gradlew :spring-boot-project:spring-boot-devtools:test
+- ./gradlew :spring-boot-project:spring-boot-docs:test
+- ./gradlew :spring-boot-project:spring-boot-properties-migrator:test
+- ./gradlew :spring-boot-project:spring-boot-test:test
+- ./gradlew :spring-boot-project:spring-boot-test-autoconfigure:test
+- ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-autoconfigure-processor:test
+- ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-buildpack-platform:test
+- ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-configuration-metadata:test
+- ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-configuration-processor:test
+- ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-jarmode-layertools:test
+- ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-loader:test
+- ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-loader-tools:test
+- ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-maven-plugin:test
+- ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-test-support:test

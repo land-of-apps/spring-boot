@@ -13,3 +13,11 @@ dependencies {
 	testImplementation("org.springframework:spring-core")
 	testImplementation("org.junit.jupiter:junit-jupiter")
 }
+
+test {
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
+}

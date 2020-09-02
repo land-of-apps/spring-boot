@@ -24,3 +24,11 @@ dependencies {
 	testImplementation("org.mockito:mockito-junit-jupiter")
 	testImplementation("org.skyscreamer:jsonassert")
 }
+
+test {
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
+}

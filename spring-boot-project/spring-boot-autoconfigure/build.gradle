@@ -186,3 +186,11 @@ dependencies {
 	testRuntimeOnly("org.jetbrains.kotlin:kotlin-reflect")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
+
+test {
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
+}

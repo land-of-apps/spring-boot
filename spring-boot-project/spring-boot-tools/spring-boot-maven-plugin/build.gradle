@@ -112,3 +112,11 @@ prepareMavenBinaries {
 artifacts {
 	"documentation" zip
 }
+
+test {
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
+}

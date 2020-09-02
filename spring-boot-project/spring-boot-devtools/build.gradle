@@ -85,3 +85,11 @@ task syncIntTestDependencies(type: Sync) {
 intTest {
 	dependsOn syncIntTestDependencies
 }
+
+test {
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
+}

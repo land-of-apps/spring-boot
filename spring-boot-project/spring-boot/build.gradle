@@ -121,3 +121,11 @@ compileTestKotlin {
 compileJava {
 	doLast new org.springframework.boot.build.log4j2.ReproducibleLog4j2PluginsDatAction()
 }
+
+test {
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
+}

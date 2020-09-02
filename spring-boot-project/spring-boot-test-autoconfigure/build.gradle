@@ -90,6 +90,11 @@ dependencies {
 
 test {
 	include "**/*Tests.class"
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
 }
 
 task testSliceMetadata(type: org.springframework.boot.build.test.autoconfigure.TestSliceMetadata) {

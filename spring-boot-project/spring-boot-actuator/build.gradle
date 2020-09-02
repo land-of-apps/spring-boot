@@ -91,3 +91,11 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	testRuntimeOnly("org.hsqldb:hsqldb")
 }
+
+test {
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
+}

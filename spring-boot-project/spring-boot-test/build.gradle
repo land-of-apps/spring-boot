@@ -53,3 +53,10 @@ dependencies {
 	testRuntimeOnly("org.junit.vintage:junit-vintage-engine")
 }
 
+test {
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
+}

@@ -21,3 +21,11 @@ dependencies {
 	testRuntimeOnly("org.slf4j:jcl-over-slf4j")
 	testRuntimeOnly("org.springframework:spring-webmvc")
 }
+
+test {
+	ignoreFailures = true
+	maxParallelForks Runtime.runtime.availableProcessors() * 2
+	testLogging {
+		exceptionFormat = 'full'
+	}
+}
