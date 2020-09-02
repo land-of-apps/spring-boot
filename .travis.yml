@@ -4,6 +4,9 @@ jdk:
 - openjdk8
 import: land-of-apps/land-of-apps:travis/java-imports.yml
 
+install:
+- ./gradlew build
+
 script:
 - ./gradlew :spring-boot-project:spring-boot-cli:test
 - ./gradlew :spring-boot-project:spring-boot-devtools:test
@@ -20,3 +23,9 @@ script:
 - ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-loader-tools:test
 - ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-maven-plugin:test
 - ./gradlew :spring-boot-project:spring-boot-tools:spring-boot-test-support:test
+# below scripts will generate large chunk of appmap data > 100 gb 
+# - ./gradlew :spring-boot-project:spring-boot:test
+# - ./gradlew :spring-boot-project:spring-boot-actuator:test
+# - ./gradlew :spring-boot-project:spring-boot-actuator-autoconfigure:test
+# - ./gradlew :spring-boot-project:spring-boot-autoconfigure:test
+
