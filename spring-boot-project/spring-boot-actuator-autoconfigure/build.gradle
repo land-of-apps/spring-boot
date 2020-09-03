@@ -151,7 +151,7 @@ dependencies {
 test {
 	outputs.dir("${buildDir}/generated-snippets")
 	ignoreFailures = true
-	systemProperty 'appmap.debug', true
+//	systemProperty 'appmap.debug', true
 	systemProperty 'appmap.config.file', "$rootDir/appmap.yml"
 	systemProperty 'appmap.output.directory', "$rootDir/tmp/appmap"
 	def agentLocation = "$rootDir/appmap.jar"
