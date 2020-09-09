@@ -8,102 +8,54 @@ packages:
     - org.springframework.boot.test.autoconfigure.data.cassandra.DataCassandraTestWithIncludeFilterIntegrationTests
     - org.springframework.boot.loader.archive.JarFileArchiveTests
     - org.springframework.boot.loader.jar.JarFileTests
+    # exlcuding classes from analysis of stats
+    - org.springframework.boot.context.properties.source.ConfigurationPropertyName
+    - org.springframework.boot.context.properties.source.SpringConfigurationPropertySource
+    - org.springframework.boot.context.properties.bind.Bindable
+    - org.springframework.boot.configurationprocessor.metadata.ItemMetadata
+    - org.springframework.boot.loader.archive.ExplodedArchive$FileEntry
+    - org.springframework.boot.web.server.MimeMappings$Mapping
+    - org.springframework.boot.autoconfigure.condition.ConditionOutcome
+    - org.springframework.boot.autoconfigure.condition.ConditionMessage
+    - org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport
+    - org.springframework.boot.autoconfigure.AutoConfigurationMetadataLoader$PropertiesAutoConfigurationMetadata
+    - org.springframework.boot.buildpack.platform.docker.ProgressUpdateEvent
+    - org.springframework.boot.cli.compiler.dependencies.Dependency
+    - org.springframework.boot.devtools.filewatch.FileSnapshot
+    - org.springframework.boot.autoconfigure.condition.SpringBootCondition
+    - org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource
+    - org.springframework.boot.context.config.ConfigDataEnvironmentContributor
+    - org.springframework.boot.loader.archive.ExplodedArchive$AbstractIterator
+    - org.springframework.boot.context.properties.bind.AbstractBindHandler
+    - org.springframework.boot.configurationprocessor.json.JSONTokener
+    - org.springframework.boot.configurationprocessor.json.JSONObject
+    - org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition
+    - org.springframework.boot.cli.compiler.grape.SummaryProgressReporter
     # getter/setter
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName$ElementType#isIndexed
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyNameAliases#getAliases
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName#getNumberOfElements
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName#isEmpty
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName#getParent
-    - org.springframework.boot.context.properties.source.SpringConfigurationPropertySource#getUnderlyingSource
-    - org.springframework.boot.context.properties.source.SpringConfigurationPropertySource#getConfigurationProperty
-    - org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource#getConfigurationProperty
     - org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource#getProperty
-    - org.springframework.boot.context.properties.bind.Bindable#getType
-    - org.springframework.boot.context.properties.bind.Bindable#getAnnotations
-    - org.springframework.boot.context.properties.bind.Bindable#getValue
     - org.springframework.boot.context.properties.bind.Binder$Context#getSources
     - org.springframework.boot.context.properties.bind.AggregateBinder$AggregateSupplier#wasSupplied
     - org.springframework.boot.context.config.DelegatingApplicationListener#getOrder
-    - org.springframework.boot.configurationprocessor.metadata.ItemMetadata#getName
-    - org.springframework.boot.configurationprocessor.metadata.ItemMetadata#isOfItemType
-    - org.springframework.boot.configurationprocessor.metadata.ItemMetadata#getDeprecation
-    - org.springframework.boot.loader.archive.ExplodedArchive$FileEntry#isDirectory
-    - org.springframework.boot.loader.archive.ExplodedArchive$FileEntry#getName
     - org.springframework.boot.loader.tools.AbstractJarWriter$UnpackHandler$1#requiresUnpack
     - org.springframework.boot.env.RandomValuePropertySource#getProperty
     - org.springframework.boot.env.OriginTrackedMapPropertySource#getProperty
-    - org.springframework.boot.web.server.MimeMappings$Mapping#getMimeType
-    - org.springframework.boot.web.server.MimeMappings$Mapping#getExtension
-    - org.springframework.boot.autoconfigure.condition.ConditionOutcome#isMatch
-    - org.springframework.boot.autoconfigure.condition.ConditionMessage#isEmpty
-    - org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport$ConditionAndOutcomes#add
-    - org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport$ConditionAndOutcome#getOutcome
-    - org.springframework.boot.autoconfigure.AutoConfigurationMetadataLoader$PropertiesAutoConfigurationMetadata#get
-    - org.springframework.boot.autoconfigure.AutoConfigurationMetadataLoader$PropertiesAutoConfigurationMetadata#getSet
     - org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer$SharedMetadataReaderFactoryBean#getObjectType
     - org.springframework.boot.devtools.restart.server.DefaultSourceDirectoryUrlFilter#isMatch
     - org.springframework.boot.buildpack.platform.docker.type.Regex#charAt
-    - org.springframework.boot.buildpack.platform.docker.ProgressUpdateEvent#getStatus
-    - org.springframework.boot.buildpack.platform.docker.ProgressUpdateEvent#getProgressDetail
-    - org.springframework.boot.buildpack.platform.docker.ProgressUpdateEvent$ProgressDetail.isEmpty
     - org.springframework.boot.buildpack.platform.docker.PullImageUpdateEvent#getId
     - org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory#getMetadataReader
     - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext#getServletConfig
-    - org.springframework.boot.cli.compiler.dependencies.Dependency#getArtifactId
-    - org.springframework.boot.cli.compiler.dependencies.Dependency#getVersion
-    - org.springframework.boot.cli.compiler.dependencies.Dependency#getGroupId
-    - org.springframework.boot.cli.compiler.dependencies.Dependency#getExclusions
     - org.springframework.boot.configurationmetadata.ConfigurationMetadataSource#getType
     - org.springframework.boot.convert.ApplicationConversionService.getSharedInstance
     # hashcode/equals/toString
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName#hashCode
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName$ElementType#allowsFastEqualityCheck
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName$ElementType#allowsDashIgnoringEqualityCheck
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName#equals
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName#toString
     - org.springframework.boot.context.config.ResourceConfigDataLocationResolver$Resolvable#hashCode
     - org.springframework.boot.loader.jar.AsciiBytes#hashCode
-    - org.springframework.boot.configurationprocessor.metadata.ItemMetadata#compareTo
     - org.springframework.boot.ansi.AnsiOutput.toString
-    - org.springframework.boot.devtools.filewatch.FileSnapshot#hashCode
-    - org.springframework.boot.devtools.filewatch.FileSnapshot#equals
-    - org.springframework.boot.autoconfigure.condition.ConditionOutcome.match
-    - org.springframework.boot.autoconfigure.condition.ConditionMessage#hashCode
-    - org.springframework.boot.autoconfigure.condition.ConditionOutcome#hashCode
-    - org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport$ConditionAndOutcome#hashCode
-    - org.springframework.boot.autoconfigure.condition.SpringBootCondition#matches
-    - org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport$ConditionAndOutcomes#isFullMatch
-    - org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition$ClassNameFilter$2#matches
-    # iterators
-    - org.springframework.boot.context.properties.source.SpringConfigurationPropertySources$SourcesIterator#next
-    - org.springframework.boot.context.properties.source.SpringConfigurationPropertySources$SourcesIterator#hasNext
-    - org.springframework.boot.context.properties.source.SpringConfigurationPropertySources#iterator
-    - org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource$ConfigurationPropertyNamesIterator#next
-    - org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource$ConfigurationPropertyNamesIterator#hasNext
-    - org.springframework.boot.context.config.ConfigDataEnvironmentContributor$ContributorIterator#next
-    - org.springframework.boot.context.config.ConfigDataEnvironmentContributor$ContributorIterator#hasNext
-    - org.springframework.boot.context.config.ConfigDataEnvironmentContributor#iterator
-    - org.springframework.boot.loader.archive.ExplodedArchive$AbstractIterator#hasNext
-    - org.springframework.boot.loader.archive.ExplodedArchive$AbstractIterator#next
-    - org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport$ConditionAndOutcomes#iterator
+    # iterators (already included above)
     # others
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName#getElement
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName#isAncestorOf
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName.ofIfValid
     - org.springframework.boot.context.properties.source.DefaultPropertyMapper#map
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName#chop
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName.adapt
-    - org.springframework.boot.context.properties.source.ConfigurationPropertyName#append
     - org.springframework.boot.context.properties.source.SystemEnvironmentPropertyMapper#map
-    - org.springframework.boot.context.properties.source.SpringConfigurationPropertySource#containsDescendantOf
-    - org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource#containsDescendantOf
-    - org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource#stream
     - org.springframework.boot.context.properties.source.FilteredIterableConfigurationPropertiesSource#stream
-    - org.springframework.boot.context.properties.bind.AbstractBindHandler#onStart
-    - org.springframework.boot.context.properties.bind.AbstractBindHandler#onFinish
-    - org.springframework.boot.context.properties.bind.Bindable.of
-    - org.springframework.boot.context.properties.bind.Bindable#withAnnotations
-    - org.springframework.boot.context.properties.bind.Bindable#withSuppliedValue
     - org.springframework.boot.context.properties.bind.DataObjectPropertyName.toDashedForm
     - org.springframework.boot.context.properties.bind.Binder#bind
     - org.springframework.boot.context.properties.bind.BindConverter$TypeConverterConversionService#canConvert
@@ -119,24 +71,9 @@ packages:
     - org.springframework.boot.test.system.OutputCapture$OutputStreamCapture#write
     - org.springframework.boot.logging.logback.LogbackLoggingSystem$1#decide
     - org.springframework.boot.logging.DeferredLog#trace
-    - org.springframework.boot.configurationprocessor.json.JSONTokener#nextValue
-    - org.springframework.boot.configurationprocessor.json.JSONObject#put
-    - org.springframework.boot.configurationprocessor.json.JSONTokener#nextString
-    - org.springframework.boot.configurationprocessor.json.JSONObject#opt
     - org.springframework.boot.configurationprocessor.json.JSONStringer#value
-    - org.springframework.boot.configurationprocessor.json.JSONObject#optString
     - org.springframework.boot.configurationprocessor.json.JSONStringer#key
-    - org.springframework.boot.configurationprocessor.json.JSONObject#putOpt
     - org.springframework.boot.configurationprocessor.fieldvalues.javac.Tree$TreeVisitorInvocationHandler#invoke
-    - org.springframework.boot.autoconfigure.condition.ConditionMessage#andCondition
-    - org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.get
-    - org.springframework.boot.autoconfigure.condition.ConditionMessage$ItemsBuilder#items
-    - org.springframework.boot.autoconfigure.condition.ConditionMessage$Builder#because
-    - org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport#recordConditionEvaluation
-    - org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.find
-    - org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition#match
     - org.springframework.boot.testsupport.system.OutputCapture$OutputStreamCapture#write
-    - org.springframework.boot.cli.compiler.grape.SummaryProgressReporter$1#transferProgressed
-    - org.springframework.boot.cli.compiler.grape.SummaryProgressReporter$2#artifactResolved
     - org.springframework.boot.cli.compiler.AstUtils.hasAtLeastOneAnnotation
     - org.springframework.boot.buildpack.platform.docker.type.LayerId.of
